@@ -1,11 +1,8 @@
 package com.cafe.pojo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
-
+@NamedQuery(name = "User.findByEmail",query = "select u from User u where u.email=:email")
 @Data
 @Entity
 public class User {
